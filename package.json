@@ -4,7 +4,7 @@
   "description": "Uses TDD to make a cli database manager for santa's bag",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -R list --watch"
   },
   "repository": {
     "type": "git",
@@ -20,7 +20,7 @@
     "chai": "^3.5.0",
     "mocha": "^3.2.0"
   },
-  "scripts": {
-    "test": "mocha -R list --watch"
+  "dependencies": {
+    "sqlite3": "^3.1.8"
   }
 }
