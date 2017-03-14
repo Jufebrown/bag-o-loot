@@ -7,4 +7,8 @@ describe(`add-child-toy`, () => {
   it(`should be a function`, () => {
     isFunction(add_child_toy)
   })
+
+  it(`should take 3 arguments`, () => {
+    equal(add_child_toy.length, 3)
+  })
 })
