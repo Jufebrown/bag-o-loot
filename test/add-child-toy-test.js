@@ -1,14 +1,14 @@
 `use strict`
 
 const {assert: {isFunction, equal}} = require(`chai`)
-const add_child_toy = require(`../lib/lootbag.js`)
+const add_child_toy = require(`../lib/add-child-toy`)
 
-describe(`addChildToy`, () => {
+describe(`add-child-toy`, () => {
   it(`should be a function`, () => {
-    isFunction(addChildToy)
+    isFunction(add_child_toy)
   })
 
   it(`should take 3 arguments`, () => {
-    equal(addChildToy.length, 3)
+    equal(add_child_toy.length, 3)
   })
 })
