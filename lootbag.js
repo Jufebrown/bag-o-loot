@@ -1,6 +1,12 @@
+#!/usr/bin/env node
+
 `use strict`
 
-module.exports = (db, toy, child) => {
+// Create a database that is saved on disk.
+const sqlite3 = require('sqlite3').verbose()
+const db = new sqlite3.Database('lootbag.sqlite', (err) => console.log('Connected'))
+
+const addChildToy = (db, toy, child) => {
   db.run(`INSERT INTO children VALUES (
     null,
     '${child}',
