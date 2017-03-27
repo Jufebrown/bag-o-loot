@@ -46,7 +46,7 @@ db.run(`CREATE TABLE IF NOT EXISTS child_toys (
   FOREIGN KEY(toy_id) REFERENCES toys(toy_id)
 )`)
 
-module.exports = (db, toy, child) => {
+module.exports.addChildToy = (toy, child) => {
   let childId
   let toyId
 

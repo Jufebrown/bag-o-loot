@@ -1,11 +1,9 @@
 `use strict`
 
 const {assert: {isFunction, equal}} = require(`chai`)
-const add_child_toy = require(`../lib/add-child-toy`)
-const sqlite3 = require('sqlite3').verbose()
-const db = new sqlite3.Database('lootbag.sqlite', (err) => console.log('Connected'))
+const {lootbag: {addChildToy}} = require(`../lootbag`)
 
-describe(`add-child-toy`, () => {
+describe(`addChildToy`, () => {
   it(`should be a function`, () => {
     isFunction(add_child_toy)
   })
@@ -15,5 +13,5 @@ describe(`add-child-toy`, () => {
   })
 
 
-  add_child_toy(db, 'BB Gun', 'Sam')
+  addChildToy('BB Gun', 'Sam')
 })
