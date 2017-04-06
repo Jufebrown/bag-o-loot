@@ -6,23 +6,24 @@
 const sqlite3 = require('sqlite3').verbose()
 const db = new sqlite3.Database('lootbag.sqlite', (err) => console.log('Connected'))
 
+// function to drop Children table
 const dropChildren = () => {
   db.run(`DROP TABLE children`)
 }
 
-dropChildren()
+// dropChildren()
 
 const dropToys = () => {
   db.run(`DROP TABLE toys`)
 }
 
-dropToys()
+// dropToys()
 
 const dropChildToys = () => {
   db.run(`DROP TABLE child_toys`)
 }
 
-dropChildToys()
+// dropChildToys()
 
 //creates children table
 db.run(`CREATE TABLE IF NOT EXISTS children (

@@ -12,6 +12,5 @@ describe(`addChildToy`, () => {
     equal(add_child_toy.length, 3)
   })
 
-
   addChildToy('BB Gun', 'Sam')
 })
